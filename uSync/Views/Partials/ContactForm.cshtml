@@ -1,0 +1,14 @@
+﻿@model Sender.Models.ContactFormViewModel
+@using (Html.BeginUmbracoForm("Submit", "ContactForm"))
+{
+    <div>
+        @Html.TextBoxFor(m => m.Name, new { @class = "col" })
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.EmailAddress, new { @class = "col" })
+    </div>
+    <div>
+        @Html.TextAreaFor(m => m.Message, new { @class = "col" })
+    </div>
+    <input type="submit" name="Submit" value="Submit" />
+}
